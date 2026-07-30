@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cyysogrvhvoxr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_maa3f"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_maa3f"]
+albedo_color = Color(0.8862745, 0.7372549, 0.45490196, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_stk2f"]
+material = SubResource("StandardMaterial3D_maa3f")
+size = Vector3(60, 2, 60)
+
+[node name="desert" type="Node3D" unique_id=2076330462]
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=102855466]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=86717862]
+shape = SubResource("BoxShape3D_maa3f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=572573069]
+mesh = SubResource("BoxMesh_stk2f")
