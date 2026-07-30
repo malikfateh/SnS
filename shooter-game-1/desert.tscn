@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cyysogrvhvoxr"]
 
+[ext_resource type="Texture2D" uid="uid://bqqlfueppqyeq" path="res://aerial_beach_01_diff_2k.jpg" id="1_8ioeg"]
 [ext_resource type="PackedScene" uid="uid://c3naf7i7s6l6x" path="res://player.tscn" id="1_21w8a"]
+[ext_resource type="Texture2D" uid="uid://dlah1jispc1pn" path="res://aerial_beach_01_nor_gl_2k.png" id="2_2obyw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_21w8a"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,10 +17,13 @@ sky = SubResource("Sky_8ioeg")
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_maa3f"]
-size = Vector3(60, 2, 60)
+size = Vector3(58.759216, 2, 60)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_maa3f"]
 albedo_color = Color(0.8862745, 0.7372549, 0.45490196, 1)
+albedo_texture = ExtResource("1_8ioeg")
+normal_enabled = true
+normal_texture = ExtResource("2_2obyw")
 
 [sub_resource type="BoxMesh" id="BoxMesh_stk2f"]
 material = SubResource("StandardMaterial3D_maa3f")
@@ -39,7 +44,7 @@ shadow_enabled = true
 shape = SubResource("BoxShape3D_maa3f")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=572573069]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1877611, -0.62722206, 0.9056244)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23824525, -0.62722206, -0.4840641)
 mesh = SubResource("BoxMesh_stk2f")
 
 [node name="Player" parent="." unique_id=345774441 instance=ExtResource("1_21w8a")]
